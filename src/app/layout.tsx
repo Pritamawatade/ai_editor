@@ -1,3 +1,4 @@
+import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider"
 import { Inter, IBM_Plex_Mono } from "next/font/google"
 
@@ -15,7 +16,7 @@ const ibmPlexMono = IBM_Plex_Mono({
 
 
 
-export default function RootLayout({ children }: RootLayoutProps) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>

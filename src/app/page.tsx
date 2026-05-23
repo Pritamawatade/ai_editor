@@ -1,3 +1,4 @@
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
 export default function Home() {
@@ -58,8 +59,13 @@ export default function Home() {
           >
             Documentation
           </a>
+
         </div>
       </main>
+
+      <Button variant="outline" className="absolute bottom-4 right-4">
+        Toggle Theme
+      </Button>
     </div>
   );
 }
