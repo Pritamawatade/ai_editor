@@ -50,6 +50,9 @@ importers:
       embla-carousel-react:
         specifier: ^8.6.0
         version: 8.6.0(react@19.2.3)
+      firecrawl:
+        specifier: ^4.25.1
+        version: 4.25.1
       inngest:
         specifier: ^4.4.0
         version: 4.4.0(@opentelemetry/core@2.7.1(@opentelemetry/api@1.9.0))(express@5.2.1)(hono@4.12.22)(next@16.1.1(@babel/core@7.29.0)(@opentelemetry/api@1.9.0)(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)(typescript@5.9.3)(zod@4.4.3)
@@ -3388,6 +3391,10 @@ packages:
 
   firecrawl@4.16.0:
     resolution: {integrity: sha512-7SJ/FWhZBtW2gTCE/BsvU+gbfIpfTq+D9IH82l9MacauLVptaY6EdYAhrK3YSMC9yr5NxvxRcpZKcXG/nqjiiQ==}
+    engines: {node: '>=22.0.0'}
+
+  firecrawl@4.25.1:
+    resolution: {integrity: sha512-arS8oCGoV+MfBF+HL/eeilBef3mJGpiVwd6VqOT6c6x3SXN4wGoNRApGiuzJH79ifjZN8DKYvIJ5d01XXn3NMw==}
     engines: {node: '>=22.0.0'}
 
   flat-cache@4.0.1:
@@ -8809,6 +8816,15 @@ snapshots:
       path-exists: 4.0.0
 
   firecrawl@4.16.0:
+    dependencies:
+      axios: 1.15.2
+      typescript-event-target: 1.1.2
+      zod: 3.25.76
+      zod-to-json-schema: 3.25.2(zod@3.25.76)
+    transitivePeerDependencies:
+      - debug
+
+  firecrawl@4.25.1:
     dependencies:
       axios: 1.15.2
       typescript-event-target: 1.1.2

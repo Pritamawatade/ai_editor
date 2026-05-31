@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "inngest": "npx inngest-cli@latest dev"
   },
   "dependencies": {
     "@ai-sdk/google": "^3.0.80",
@@ -23,6 +24,7 @@
     "convex": "1.31.2",
     "date-fns": "^4.3.0",
     "embla-carousel-react": "^8.6.0",
+    "firecrawl": "^4.25.1",
     "inngest": "^4.4.0",
     "input-otp": "^1.4.2",
     "lucide-react": "^1.16.0",
