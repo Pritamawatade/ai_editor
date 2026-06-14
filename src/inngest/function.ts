@@ -37,8 +37,25 @@ export const processTask = inngest.createFunction({ id: "process-task", triggers
             const response = await generateText({
                 model: openai('gpt-4.1-mini'),
                 prompt: finalPrompt,
+                experimental_telemetry: {
+                 isEnabled: true,
+                 recordInputs: true,
+                 recordOutputs: true,   
+                }
             });
             return response;
+        })
+    }
+)
+
+export const demoError = inngest.createFunction(
+    {
+        id: "demo-error",
+        triggers: { event: "demo/error" }
+    },
+    async ({ step }) => {
+        await step.run("fail", async () => {
+            throw new Error("Inngest error: Background job got failed!")
         })
     }
 )

@@ -9,7 +9,7 @@ export default function Home() {
   const create = useMutation(api.project.create);
 
   const callAI = async () => {
-    const response = await fetch("/api/demo/blocking", {
+    const response = await fetch("/api/demo/background", {
         method: "POST",
     });
     const data = await response.json();

@@ -1,5 +1,23 @@
 "use client";
+
+import { Button } from "@/components/ui/button";
+
 export default function Demo() {
+
+  const handleClientError = ()=>{
+    throw new Error("Client error: Something went wrong in the browser!")
+  }
+  const handleApiError = async () =>{
+    await fetch("/api/demo/error", {
+        method: "POST",
+    });
+  }
+
+  const handleInngestError = async () =>{
+  await fetch("/api/demo/inngest-error", {
+        method: "POST",
+    });
+  }
     const callAI = async () => {
         const response = await fetch("/api/demo/background", {
             method: "POST",
@@ -21,6 +39,10 @@ export default function Demo() {
           Generate Recipe
         </button>
       </div>
+
+      <Button onClick={handleClientError}>Handle Client Error</Button>
+      <Button onClick={handleApiError}>Handle API Error</Button>
+      <Button onClick={handleInngestError}>Handle Inngest Error</Button>
     </div>
   );
 }
