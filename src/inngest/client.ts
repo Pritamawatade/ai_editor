@@ -1,5 +1,8 @@
 // src/inngest/client.ts
 import { Inngest } from "inngest";
-
-export const inngest = new Inngest({ id: "ai_editor" });
+import { sentryMiddleware } from "@inngest/middleware-sentry"
+export const inngest = new Inngest({
+    id: "ai_editor",
+    middleware: [sentryMiddleware()]
+});
 

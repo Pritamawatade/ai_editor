@@ -5,7 +5,7 @@ export async function POST(){
     await inngest.send({
         name: "task.created",
         data: {
-            message: "Hi"
+            message: "Hi what's latest version of nextjs? docs: https://nextjs.org/docs/getting-started"
         }
     })
 
